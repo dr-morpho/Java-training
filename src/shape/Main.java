@@ -7,6 +7,5 @@ public class Main {
         
         System.out.println(triangle.sumShape());
         System.out.println(square.sumShape());
-        System.out.println("Hello!");
     }
 }
