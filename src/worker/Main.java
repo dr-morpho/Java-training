@@ -5,12 +5,10 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Cook cook = new Cook();
-        Director director = new Director();
         Programmer programmer = new Programmer();
         
         ArrayList<Worker> workArr = new ArrayList<>();
         workArr.add(cook);
-        workArr.add(director);
         workArr.add(programmer);
         
         for(Worker elem : workArr){
@@ -19,10 +17,20 @@ public class Main {
         
         ArrayList<Drive> driveArr = new ArrayList<>();
         driveArr.add(programmer);
-        driveArr.add(director);
         
         for(Drive elem : driveArr) {
             elem.drive();
         }
+        
+        System.out.println("-------------------------");
+        
+        Director director = new Director();
+//      Анонимные классы:
+        director.force(new Worker() {
+            @Override
+            public void work(){
+                System.out.println("Работу работаю");
+            }
+        });
     }
 }
