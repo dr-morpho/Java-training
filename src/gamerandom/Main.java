@@ -26,7 +26,7 @@ public class Main {
             @Override
             public void run() {
                 for (int i = 0; i < 1_000_000; i++) {
-                    if(win) {
+                    if (win) {
                         break;
                     }
                     System.out.println(i);
@@ -38,7 +38,5 @@ public class Main {
             }
         });
         threadOne.start();
-        
-        
     }
 }
